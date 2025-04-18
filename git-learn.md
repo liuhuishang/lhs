@@ -11,38 +11,37 @@
 
 3.创建git本地库：
 
-* 打开gitbash，使用cd导航到相应文件夹
+* `打开gitbash，使用cd导航到相应文件夹`
     
-* 使用命令：`git init`，在本文件夹建立仓库
+* `使用命令：git init，在本文件夹建立仓库`
     
-* 文件夹中会显示.git文件
+* `文件夹中会显示.git文件`
     
 4.使用git与github连接并将文件上传更新
 
    *1）将git与github进行连接* [参考连接](https://blog.csdn.net/Natsuago/article/details/145647536)
 
-   * 使用指令：git config --global user.name “username”和git config --global user.email “email”，将git与自己的github进行连接。
+   * `使用指令：git config --global user.name “username”和git config --global user.email “email”，将git与自己的github进行连接。`
     
-   * 指令：git config --list可以查看配置信息。
+   * `指令：git config --list可以查看配置信息。`
     
-   * 指令：ssh-keygen -t rsa -b 4096 -C "your-email@example.com"生成一个公钥,找到这个公钥复制并在github的设置中建立一个ssh连接，SSH Key 到 GitHub。连接后可以使用：ssh -T git@github.com查看是否连接成功。
+   * `指令：ssh-keygen -t rsa -b 4096 -C "your-email@example.com"生成一个公钥,找到这个公钥复制并在github的设置中建立一个ssh连接，SSH Key 到 GitHub。连接后可以使用：ssh -T git@github.com查看是否连接成功。`
     
    *2）保存git本地库中的文件和将文件上传*[参考链接](https://blog.csdn.net/A496608119/article/details/123566231)
 
-   * 使用：git add .将所有待上传文件加载到缓冲区或者使用：git add 文件 的形式把待上传文件加载到缓冲区。
+   * `使用：git add .将所有待上传文件加载到缓冲区或者使用：git add 文件 的形式把待上传文件加载到缓冲区。`
     
-   * 使用：git commit -m "wrote a readme file"指令将缓冲区的文件上传到指定仓库。
+   * `使用：git commit -m "wrote a readme file"指令将缓冲区的文件上传到指定仓库。`
 
-   * 使用：git remote add origin https://github.com/XX/XXX.git（这里我已经连接成功，所以我使用的指令是：git remote add origin master）便可以将git的本地库中的文件上传到github中。
+   * `使用：git remote add origin https://github.com/XX/XXX.git（这里我已经连接成功，所以我使用的指令是：git remote add origin master）便可以将git的本地库中的文件上传到github中。`
     
 5.使用git对文件操作
     
-  * 查看操作结果：git status。git status命令可以让我们时刻掌握仓库当前的状态。
+  * `查看操作结果：git status。git status命令可以让我们时刻掌握仓库当前的状态。`
 
-  * 版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用git log命令查看。如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数。
+  * `版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用git log命令查看。如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数。`
 
-  * 把当前版本返回到上一个版本就可以使用git reset --hard HEAD^,也可以指定要回退到某一个版本即git reset --hard 版本号。
-
+  * `把当前版本返回到上一个版本就可以使用git reset --hard HEAD^,也可以指定要回退到某一个版本即git reset --hard 版本号。`
   * 
 
 3.git常见指令：
