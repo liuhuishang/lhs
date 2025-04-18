@@ -1,13 +1,22 @@
 # git学习记录
-
+---
 [参考廖雪峰git学习教程](https://liaoxuefeng.com/books/git/introduction/index.html)
 
+---
 1.git的安装（windows）：[参考详细教程](https://blog.csdn.net/mukes/article/details/115693833)
+
+
 2.创建github账号：[注册github账号教程](https://blog.csdn.net/m0_67906358/article/details/128808210)
+
+
 3.创建git本地库：
+
     *打开gitbash，使用cd导航到相应文件夹
+    
     *使用命令：git init，在本文件夹建立仓库
+    
     *文件夹中会显示.git文件
+    
 4.使用git查看文件的修改日志以及修改过程
     
        
