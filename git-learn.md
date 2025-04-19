@@ -16,6 +16,8 @@
 * `使用命令：git init，在本文件夹建立仓库`
     
 * `文件夹中会显示.git文件`
+
+  
     
 4.使用git与github连接并将文件上传更新
 
@@ -34,16 +36,39 @@
    * `使用：git commit -m "wrote a readme file"指令将缓冲区的文件上传到指定仓库。`
 
    * `使用：git remote add origin https://github.com/XX/XXX.git（这里我已经连接成功，所以我使用的指令是：git remote add origin master）便可以将git的本地库中的文件上传到github中。`
+
+
     
 5.使用git对文件操作
     
-  * `查看操作结果：git status。git status命令可以让我们时刻掌握仓库当前的状态。`
+  * `查看运行结果：git status。git status命令可以让我们时刻掌握仓库当前的状态。`
 
   * `版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用git log命令查看。如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数。`
 
   * `把当前版本返回到上一个版本就可以使用git reset --hard HEAD^,也可以指定要回退到某一个版本即git reset --hard 版本号。`
-  * 
 
+  * `管理修改：使用git add进行上传到暂存区，使用git commit把暂存区上传修改`
+
+  * `撤销的工作原理：使用git checkout -- file，可以让文件撤销到最近一次修改的状态`
+
+  * `用rm命令可以将文件进行删除。从版本库中删除该文件，那就用命令git rm删掉，并且git commit。删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
+git checkout -- file`。
+
+
+6.分支管理
+1）创建合并分支
+
+  * 创建dev分支，然后切换到dev分支：git checkout -b dev  Switched to a new branch 'dev'。git checkout命令加上-b参数表示创建并切换，相当于以下两条命令： git branch dev， git checkout dev  Switched to branch 'dev'，然后，用git branch命令查看当前分支，git branch命令会列出所有分支，当前分支前面会标一个*号。
+
+  * 可以在dev分支上正常提交，把dev分支的工作成果合并到master分支上：使用命令 git merge dev，git merge命令用于合并指定分支到当前分支，合并完成后，就可以放心地删除dev分支了
+
+  * 最新版本的Git提供了新的git switch命令来切换分支：创建并切换到新的dev分支，可以使用：git switch -c dev，直接切换到已有的master分支，可以使用： git switch master
+
+  * 常见的创建合并分支指令：查看分支：git branch，创建分支：git branch <name>，切换分支：git checkout <name>或者git switch <name>，创建+切换分支：git checkout -b <name>或者git switch -c <name>，合并某分支到当前分支：git merge <name>，删除分支：git branch -d <name>。
+
+2）解决冲突
+
+  * 
 3.git常见指令：
 
 * `git init                                                  # 初始化本地git仓库（创建新仓库）`
