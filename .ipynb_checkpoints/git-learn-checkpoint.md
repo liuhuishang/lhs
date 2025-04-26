@@ -35,7 +35,7 @@
     
    * `使用：git commit -m "wrote a readme file"指令将缓冲区的文件上传到指定仓库。`
 
-   * `使用：git remote add origin https://github.com/XX/XXX.git（这里我已经连接成功，所以我使用的指令是：git remote add origin master）便可以将git的本地库中的文件上传到github中。`
+   * `使用：git remote add origin https://github.com/XX/XXX.git（这里我已经连接成功，所以我使用的指令是：git remote add origin master）便可以将git的本地库中的文件上传到github中。也可以使用git push -u origin master的形式来进行上传文件`
 
 
     
@@ -65,8 +65,6 @@ git checkout -- file`。
   * 最新版本的Git提供了新的git switch命令来切换分支：创建并切换到新的dev分支，可以使用：git switch -c dev，直接切换到已有的master分支，可以使用： git switch master
 
   * 常见的创建合并分支指令：查看分支：git branch，创建分支：git branch <name>，切换分支：git checkout <name>或者git switch <name>，创建+切换分支：git checkout -b <name>或者git switch -c <name>，合并某分支到当前分支：git merge <name>，删除分支：git branch -d <name>。
-
-2）解决冲突
 
   * 
 3.git常见指令：
