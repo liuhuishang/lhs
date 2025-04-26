@@ -11,9 +11,8 @@
 ## 1.vi/vim命令
 
 使用vi建立一个txt文件
-![vi的使用](/image/2.png)
 
-![vi的使用](/image/3.png)
+![vi的使用](/image/9.png)
 
 ## 2.Linux yum 命令
 
@@ -77,28 +76,52 @@
 
 1.列出所有可更新的软件清单命令：sudo apt update
 
+![apt的使用](/image/10.png)
+
 2.升级软件包：sudo apt upgrade
+
+![apt的使用](/image/11.png)
 
 3.列出可更新的软件包及版本信息：apt list --upgradable
 
+![apt的使用](/image/12.png)
+
 4.升级软件包，升级前先删除需要更新软件包：sudo apt full-upgrade
+
+![apt的使用](/image/13.png)
 
 5.安装指定的软件命令：sudo apt install <package_name>
 
+![apt的使用](/image/14.png)
+
 6.安装多个软件包：sudo apt install <package_1> <package_2> <package_3>
+
+![apt的使用](/image/14.png)
 
 7.更新指定的软件命令：sudo apt update <package_name>
 
 8.显示软件包具体信息,例如：版本号，安装大小，依赖关系等等：sudo apt show <package_name>
 
+![apt的使用](/image/15.png)
+
 9..删除软件包命令：sudo apt remove <package_name>
+
+![apt的使用](/image/16.png)
 
 10.清理不再使用的依赖和库文件: sudo apt autoremove
 
+![apt的使用](/image/17.png)
+
 11.移除软件包及配置文件: sudo apt purge <package_name>
+
+![apt的使用](/image/18.png)
 
 12.查找软件包命令： sudo apt search <keyword>
 
+![apt的使用](/image/19.png)
+
 13.列出所有已安装的包：apt list --installed
 
+![apt的使用](/image/20.png)
 14.列出所有已安装的包的版本信息：apt list --all-versions
+![apt的使用](/image/21.png)
