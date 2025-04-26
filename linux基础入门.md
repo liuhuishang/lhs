@@ -13,7 +13,9 @@
 ---
 
 首先进行yum的安装使用指令：apt-get install yum
-![](C:\Users\13304\Desktop\学习图像\1.png)
+
+![]
+(C:\Users\13304\Desktop\学习图像\1.png)
 
 ---
    1.列出所有可更新的软件清单命令：yum check-update
