@@ -67,7 +67,49 @@ git checkout -- file`。
 
   * 常见的创建合并分支指令：查看分支：git branch，创建分支：git branch <name>，切换分支：git checkout <name>或者git switch <name>，创建+切换分支：git checkout -b <name>或者git switch -c <name>，合并某分支到当前分支：git merge <name>，删除分支：git branch -d <name>。
 
-  * 
+2）解决冲突
+
+  * 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提
+
+用git log --graph命令可以看到分支
+
+3）分支管理
+
+  * 合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
+如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信
+
+4）bug分支
+
+  *  修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现
+
+在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重
+
+5）feature分支
+
+  *  添加一个新功能时，你肯定不希望因为一些实验性质的代码，把主分支搞乱了，所以，每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。复
+6）多人协作
+
+  * 用git remote -v显示更详细的信息，上面显示了可以抓取和推送的origin的地址。如果没有推送权限，就看不到push的地址，推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上： git push origin master，如果要推送其他分支，比如dev，就改成： git push origin dev。
+
+  * 查看远程库信息，使用git remote -v；本地新建的分支如果不推送到远程，对其他人就是不可见的；从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
+
+7.标签管理
+
+1）创建标签
+
+  * 在Git中打标签非常简单，首先，切换到需要打标签的分支上，然后，敲命令git tag name就可以打一个新标签，可以用命令git tag查看所有标签。
+
+  * 命令git tag tagname用于新建一个标签，默认为HEAD，也可以指定一个commit id；命令git tag -a tagname -m "blablabla..."可以指定标签信息；命令git tag可以查看所有标签。
+    
+2）操作标签
+
+  * 如果标签打错了，也可以删除：git tag -d ，如果要推送某个标签到远程，使用命令git push origin tagname
+
+  * 命令git push origin tagname可以推送一个本地标签；命令git push origin --tags可以推送全部未推送过的本地标签；命令git tag -d tagname可以删除一个本地标签；命令git push origin :refs/tags/tagname可以删除一个远程标签
+
+    。8  。 合并图。
 3.git常见指令：
 
 * `git init                                                  # 初始化本地git仓库（创建新仓库）`

@@ -2,11 +2,10 @@
 ---
 [参考连接](https://blog.csdn.net/qq_42417071/article/details/136327674)
 
-根据以上教程进行虚拟机的安装以及ubuntu的安装，以便可以在电脑进行linux的相关学习。
+根据以上教程进行虚拟机的安装以及ubuntu的安装，由于我之前安装过并且拥有一个centos，所以我现在有两个linux的系统以便可以在电脑进行linux的相关学习。
 
-# 2.docker的下载和使用
 
-# 3.linux的基础命令
+# 2.linux的基础命令
 
 ## 1.vi/vim命令
 
